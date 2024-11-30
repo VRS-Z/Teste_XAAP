@@ -1,0 +1,155 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo geral do corpo */
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  color: #333;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end; /* Alinha o conteúdo à direita */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+/* Container de fundo para o formulário */
+.background-container {
+  width: 40%; /* Define a largura ocupada pelo formulário */
+  height: 100%; /* Preenche a altura total */
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1); /* Sombra no lado esquerdo */
+}
+
+/* Estilização do wrapper do formulário */
+.form-wrapper {
+  width: 90%;
+  max-width: 400px; /* Define a largura máxima */
+  background: #e8e8e8; /* Fundo do formulário */
+  padding: 30px;
+  border-radius: 8px; /* Cantos arredondados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra do card */
+}
+
+/* Estilo do título do formulário */
+.form-wrapper h1 {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: normal;
+  color: #555;
+}
+
+/* Grupos de formulário */
+.form-group {
+  margin-bottom: 15px; /* Espaçamento entre grupos */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Estilo para os campos de entrada */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  background: #ffffff;
+}
+
+/* Foco nos campos de entrada */
+input:focus {
+  border-color: #007bff; /* Altera a cor da borda ao focar */
+}
+
+/* Checkbox e termos de uso */
+.form-group-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form-group-checkbox input {
+  margin-right: 10px;
+}
+
+.form-group-checkbox a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.form-group-checkbox a:hover {
+  text-decoration: underline;
+}
+
+/* Botão de envio */
+button {
+  width: 100%;
+  padding: 12px;
+  background: #ccc; /* Cinza desativado */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: not-allowed; /* Cursor desativado inicialmente */
+  transition: background 0.3s;
+}
+
+button:enabled {
+  background: #007bff; /* Azul habilitado */
+  cursor: pointer;
+}
+
+button:enabled:hover {
+  background: #0056b3; /* Azul mais escuro ao passar o mouse */
+}
+
+/* Rodapé do formulário */
+.footer {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+.footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+  body {
+    justify-content: center; /* Centraliza o formulário em telas menores */
+  }
+
+  .background-container {
+    width: 100%; /* Ocupa a largura total em dispositivos móveis */
+    box-shadow: none; /* Remove sombra */
+  }
+
+  .form-wrapper {
+    border-radius: 0; /* Remove bordas arredondadas */
+  }
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+    <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="assets/stylesheet/cadastro.css" />
+  </head>
+  <body>
+    <!-- Container principal para o fundo da página -->
+    <div class="background-container">
+      <!-- Wrapper para centralizar o formulário -->
+      <div class="form-wrapper">
+        <h1>Nova Conta</h1>
+        <!-- Formulário de cadastro -->
+        <form action="processar.php" method="POST">
+          <!-- Campo para nome -->
+          <div class="form-group">
+            <label for="nome">Nome *</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Digite seu nome"
+              required
+            />
+          </div>
+
+          <!-- Campo para celular -->
+          <div class="form-group">
+            <label for="celular">Celular *</label>
+            <input
+              type="tel"
+              id="celular"
+              name="telefone"
+              placeholder="Digite seu celular"
+              required
+            />
+          </div>
+
+          <!-- Campo para email -->
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Digite seu email"
+              required
+            />
+          </div>
+
+          <!-- Campo para senha -->
+          <div class="form-group">
+            <label for="senha">Senha *</label>
+            <input
+              type="password"
+              id="senha"
+              name="senha"
+              placeholder="Digite sua senha"
+              required
+            />
+          </div>
+
+          <!-- Campo para confirmação de senha -->
+          <div class="form-group">
+            <label for="confirmar-senha">Confirmar senha *</label>
+            <input
+              type="password"
+              id="confirmar-senha"
+              name="confirmar-senha"
+              placeholder="Confirme sua senha"
+              required
+            />
+          </div>
+
+          <!-- Checkbox para termos de uso -->
+          <div class="form-group-checkbox">
+            <input type="checkbox" id="termos" name="termos" required />
+            <label for="termos">
+              Li e aceito os <a href="#">termos de uso</a>.
+            </label>
+          </div>
+
+          <!-- Botão de envio do formulário -->
+          <button type="submit" disabled>Criar Conta</button>
+        </form>
+
+        <!-- Link para login -->
+        <div class="footer">Já possui conta? <a href="#">Fazer login</a></div>
+      </div>
+    </div>
+
+    <!-- Script para validação e interatividade -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.querySelector("form");
+        const nome = document.getElementById("nome");
+        const telefone = document.getElementById("celular");
+        const email = document.getElementById("email");
+        const senha = document.getElementById("senha");
+        const confirmarSenha = document.getElementById("confirmar-senha");
+        const termos = document.getElementById("termos");
+        const botaoCriarConta = form.querySelector("button[type='submit']");
+
+        // Regex para validação de telefone e email
+        const telefoneRegex = /^\(\d{2}\) \d{4,5}-\d{4}$/;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        // Função para validar o formulário
+        const validarFormulario = () => {
+          let valido = true;
+
+          // Validações para os campos obrigatórios
+          if (nome.value.trim() === "") {
+            alert("O campo Nome é obrigatório.");
+            valido = false;
+          }
+
+          if (!telefoneRegex.test(telefone.value.trim())) {
+            alert("O telefone deve estar no formato (XX) XXXXX-XXXX.");
+            valido = false;
+          }
+
+          if (!emailRegex.test(email.value.trim())) {
+            alert("Por favor, insira um email válido.");
+            valido = false;
+          }
+
+          if (senha.value.trim() === "" || confirmarSenha.value.trim() === "") {
+            alert("Os campos de senha são obrigatórios.");
+            valido = false;
+          } else if (senha.value !== confirmarSenha.value) {
+            alert("As senhas não coincidem.");
+            valido = false;
+          }
+
+          if (!termos.checked) {
+            alert("Você deve aceitar os termos de uso.");
+            valido = false;
+          }
+
+          return valido;
+        };
+
+        // Validação em tempo real para telefone
+        telefone.addEventListener("input", () => {
+          if (telefoneRegex.test(telefone.value)) {
+            telefone.setCustomValidity("");
+          } else {
+            telefone.setCustomValidity(
+              "O telefone deve estar no formato (XX) XXXXX-XXXX."
+            );
+          }
+        });
+
+        // Habilita o botão apenas se o formulário for válido
+        form.addEventListener("input", () => {
+          botaoCriarConta.disabled = !validarFormulario();
+        });
+
+        // Impede envio do formulário caso inválido
+        form.addEventListener("submit", (event) => {
+          if (!validarFormulario()) {
+            event.preventDefault();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

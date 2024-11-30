@@ -1,0 +1,58 @@
+
+Bom dia!
+
+Desde já, agradecemos sua participação em nosso processo seletivo. 
+O objetivo do teste é entender o nível de conhecimento nas seguintes tecnologias abaixo:
+
+PHP ou C#
+HTML
+CSS
+SQL (Postgres ou Mysql)
+
+Observação: Utilize somente recursos e conhecimentos que você domina. Caso seja aprovado, faremos uma conversa sobre o conhecimento utilizado.
+
+Instruções:
+
+Construção das páginas HTML
+
+Em anexo foram fornecidas 4 imagens contendo layouts para construção de 2 paginas responsivas (desktop e mobile).
+
+1 - As imagens poderão ser recortadas do próprio layout usando algum editor
+2 - Utilizar as cores que estão nas imagens para os elementos
+3 - Poderão ser utilizados frameworks como Bootstrap (IMPORTANTE: Não utilizar Tailwind)
+4 - As páginas são responsivas. Teremos somente 2 arquivos html no resultado final
+5 - Pontos que serão positivos na implementação
+  5.1 - Fidelidade ao Layout
+  5.2 - Responsividade
+  5.3 - Semântica
+  5.4 - Performance
+  5.5 - Estética dos fontes
+
+*Font-Family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+
+Envio de formulário para Backend
+
+O objetivo deste passo do teste é entender o nível de conhecimento e organização de códigos fonte na recepção e persistencia de informações.
+
+1 - Utilizar a persistência via SQL puro, não usar ORMs
+2 - Transportar informações até a camada onde será persistido os dados em uma tabela chamada "Cliente" e "Contatos"
+3 - Não precisa entregar bkp do banco de dados, a instrução de inserção basta.
+4 - Pontos que serão positivos na implementação
+  4.1 - Estética dos fontes (Code Clean, Encapsulamento, Padrões de Nomenclaturas)
+  4.2 - Arquitetura / Orientação a Objetos / Padrões de Projeto / ACID
+  4.3 - Validações e consistência
+  4.4 - Tratamento de erros
+  4.5 - Capacidade de análise e interpretação
+  4.6 - Utilização de Store Procedure / Constraints / Chaves
+  
+  
+  
+ Desejamos boa sorte e em breve lhe daremos um retorno.
+
+
+
+
+
+
+
+
