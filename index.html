@@ -3,11 +3,8 @@
   <head>
     <!-- Metadados básicos -->
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
-    <title>Início</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Início | Hexapp</title>
 
     <!-- Font Awesome para ícones -->
     <link
@@ -23,7 +20,14 @@
     <section class="hero">
       <!-- Cabeçalho com navegação -->
       <header class="header">
-        <nav class="navigation">
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="navigation"
+        ></button>
+        <nav class="navigation" id="navigation">
           <a href="#">Visão Geral</a>
           <a href="#">Planos e Preços</a>
           <a href="#">Blog</a>
@@ -85,7 +89,7 @@
     </section>
 
     <!-- Seção de recursos -->
-    <section class="lista-serviços">
+    <section class="lista-servicos">
       <h3>Explore recursos do Hexapp</h3>
       <div class="image-container">
         <img src="assets/Images/image3.png" alt="Designer Responsive" />
@@ -142,17 +146,17 @@
       </div>
     </section>
 
+    <!-- Rodapé -->
+    <footer>
+      <p class="copyright">Copyright 2024</p>
+      <div class="social-icons">
+        <a href="#" class="icon youtube" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="icon instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="icon facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </footer>
+
     <!-- Script externo -->
     <script src="src/script/script.js"></script>
   </body>
-
-  <!-- Rodapé -->
-  <footer>
-    <p class="copyright">Copyright 2024</p>
-    <div class="social-icons">
-      <a href="#" class="icon youtube"><i class="fab fa-youtube"></i></a>
-      <a href="#" class="icon instagram"><i class="fab fa-instagram"></i></a>
-      <a href="#" class="icon facebook"><i class="fab fa-facebook-f"></i></a>
-    </div>
-  </footer>
 </html>

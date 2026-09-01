@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cadastro</title>
+    <title>Criar Conta | Hexapp</title>
     <!-- Link para o arquivo CSS -->
     <link rel="stylesheet" href="assets/stylesheet/cadastro.css" />
   </head>
@@ -14,7 +14,7 @@
       <div class="form-wrapper">
         <h1>Nova Conta</h1>
         <!-- Formulário de cadastro -->
-        <form action="processar.php" method="POST">
+        <form action="src/routes/processar.php" method="POST">
           <!-- Campo para nome -->
           <div class="form-group">
             <label for="nome">Nome *</label>
@@ -34,7 +34,7 @@
               type="tel"
               id="celular"
               name="telefone"
-              placeholder="Digite seu celular"
+              placeholder="(88) 99999-9999"
               required
             />
           </div>

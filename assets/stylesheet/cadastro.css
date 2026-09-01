@@ -10,7 +10,7 @@ body {
   font-family: Arial, sans-serif;
   background: #f2f2f2;
   color: #333;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: flex-end; /* Alinha o conteúdo à direita */
   align-items: center; /* Centraliza verticalmente */
@@ -19,7 +19,7 @@ body {
 /* Container de fundo para o formulário */
 .background-container {
   width: 40%; /* Define a largura ocupada pelo formulário */
-  height: 100%; /* Preenche a altura total */
+  min-height: 100vh; /* Preenche ao menos a altura total */
   background: #ffffff;
   display: flex;
   justify-content: center;

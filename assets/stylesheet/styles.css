@@ -197,7 +197,7 @@ footer {
 }
 
 /* Lista de Serviços */
-.lista-serviços {
+.lista-servicos {
   align-items: flex-start;
   gap: 50px;
   margin: 0;
@@ -291,6 +291,10 @@ ul li {
   justify-content: flex-end;
   align-items: center;
   padding: 20px 0;
+}
+
+.menu-toggle {
+  display: none;
 }
 
 /* Navegação principal */
@@ -484,7 +488,7 @@ ul li {
   }
 
   /* Lista de Serviços em layout vertical */
-  .lista-serviços {
+  .lista-servicos {
     font-family: Arial, sans-serif;
     background-color: #0056b3;
     color: white;
@@ -517,16 +521,31 @@ ul li {
     justify-content: space-between;
   }
 
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .menu-toggle::before {
+    content: "\2630"; /* Ícone de hambúrguer */
+    font-size: 24px;
+    color: white;
+  }
+
   .navigation {
     display: none; /* Menu oculto por padrão */
     flex-direction: column;
     background-color: black;
     position: absolute;
     top: 60px;
-    right: 0;
+    left: 0;
     width: 200px;
     padding: 10px;
     border-radius: 8px; /* Adiciona bordas arredondadas */
+    z-index: 10;
   }
 
   .navigation a {
@@ -535,21 +554,12 @@ ul li {
     font-size: 14px;
   }
 
-  .header::before {
-    content: "\2630"; /* Ícone de hambúrguer */
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
-  }
-
   /* Menu aberto no cabeçalho */
   .header.open .navigation {
-    margin-right: 45%;
-    margin-top: 5%;
     display: flex;
   }
 
-  .header.open::before {
+  .header.open .menu-toggle::before {
     content: "\2715"; /* Ícone de fechar */
   }
 
